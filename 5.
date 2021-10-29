@@ -1,0 +1,20 @@
+a = input('Введите любой текст или набор символов в виде строки: ')
+count_vowels = 0
+count_consonants = 0
+vowels = set("aeiouyаоэеиыуёюяAEIOUYАОЭЕИЫУЁЮЯ")
+consonants = set("bcdfghjklmnpqrstvwxzбвгджзйклмнпрстфхцчшщBCDFGHJKLMNPQRSTVWXZБВГДЖЗЙКЛМНПРСТФХЦЧШЩ")
+def func_vowels(a, count_vowels):  
+    for letter in a:
+        if letter in vowels:
+            count_vowels += 1
+    return count_vowels
+def func_consonants(a, count_consonants):  
+    for letter in a:
+        if letter in consonants:
+            count_consonants += 1
+    return count_consonants
+print_v_or_c = int(input('Введите 0, чтобы узнать количество гласных или введите 1, чтобы узнать количество согласных:'))
+if print_v_or_c == 0:
+    print("Количество гласных равно:", func_vowels(a, count_vowels))
+elif print_v_or_c == 1:
+    print("Количество согласных равно:", func_consonants(a, count_consonants))
