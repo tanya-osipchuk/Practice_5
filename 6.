@@ -1,0 +1,10 @@
+a = input('Введите любой текст или набор символов в виде строки: ')
+result_list = list(a)
+result_dict = {index: value for index, value in enumerate(result_list)}
+support = {}
+for key,value in result_dict.items():
+    if value not in support:
+        support[value]=0
+    else:
+        support[value]+=1
+print('Символ, который встречается чаще всего: ', max(support,key=support.get))
