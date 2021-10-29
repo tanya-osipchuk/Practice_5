@@ -1,0 +1,6 @@
+s = input('Введите своё ФИО: ')
+s = s.split(' ')
+d = len(s)
+for x in range(d):
+    a = list(s[x])
+    print(a[0],'.', sep = '', end = ' ')
