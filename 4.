@@ -1,0 +1,30 @@
+import random as rnd
+
+points = 0
+
+def quiz(points1):
+    index = rnd.choice(list(lib.keys()))
+
+    if input('Print Capital of ' + index + ': ') == lib[index]:
+        print('RIGHT')
+        points1 += 1
+    else:
+        print('ERROR')
+    return points1
+
+lib = {
+    'Russia' : 'Moscow',
+    'United Kingdom' : 'London',
+    'USA' : 'Washington',
+    'Azerbaijan' : 'Baku',
+    'Maldives' : 'Male',
+    'Latvia' : 'Riga',
+    'Italy' : 'Rome',
+    'Japan' : 'Tokyo',
+    'Germany' : 'Berlin',
+    'France' : 'Paris'
+    }
+while input('Do you want to play a quiz?: ') == 'yes':
+    points = quiz(points)
+else:
+    print('You have ', points, 'points!')
