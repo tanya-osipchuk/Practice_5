@@ -1,0 +1,7 @@
+def compare(number, input_list):
+    return[c for c in input_list if c > number]
+my_num = int(input("Ведите любое целое число: "))
+my_list = [int(element) for element in input("Введите список целых чисел через пробел: ").split()]
+print("Числа больше введенного: ")
+for i in compare(my_num, my_list):
+    print(i, end = ' ')
